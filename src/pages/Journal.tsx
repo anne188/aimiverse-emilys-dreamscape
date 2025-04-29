@@ -1,11 +1,10 @@
-
 import React, { useState } from 'react';
 import MainLayout from '@/components/layout/MainLayout';
 import ProfileHeader from '@/components/ui/ProfileHeader';
 import { FloatingSparkles } from '@/components/ui/FloatingElements';
 import { Calendar } from '@/components/ui/calendar';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
-import { Loader2, Journal as JournalIcon, Calendar as CalendarIcon } from 'lucide-react';
+import { Loader2, BookOpen, Calendar as CalendarIcon } from 'lucide-react';
 import { format } from 'date-fns';
 
 // Mock journal entries
@@ -104,7 +103,7 @@ export default function Journal() {
           <div className="emily-card p-4">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center">
-                <JournalIcon className="mr-2 h-5 w-5 text-emily-pink" />
+                <BookOpen className="mr-2 h-5 w-5 text-emily-pink" />
                 <h2 className="text-lg font-medium">Journal Entries</h2>
               </div>
               

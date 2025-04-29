@@ -144,15 +144,15 @@ export default function Calendar() {
               modifiersClassNames={{
                 selected: 'bg-emily-lavender text-black',
               }}
-              modifiers={{
-                customDay: (date) => {
-                  const formattedDate = format(date, 'yyyy-MM-dd');
-                  return events.some(event => format(event.date, 'yyyy-MM-dd') === formattedDate);
-                }
-              }}
               styles={{
                 day: {
-                  customDay: { fontWeight: 'bold' }
+                  highlighted: { fontWeight: 'bold' }
+                }
+              }}
+              modifiers={{
+                highlighted: (date) => {
+                  const formattedDate = format(date, 'yyyy-MM-dd');
+                  return events.some(event => format(event.date, 'yyyy-MM-dd') === formattedDate);
                 }
               }}
             />
